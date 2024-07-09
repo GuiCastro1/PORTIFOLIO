@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Site</title>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+    
+    .intro-image {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #000;
+      transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+      z-index: 10;
+    }
+    
+    .intro-image img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+    
+    .site-content {
+      display: none;
+      text-align: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      z-index: 1;
+    }
+    
+    .site-content.active {
+      display: block;
+      animation: fadeIn 1s ease-in-out;
+    }
+    
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="intro-image">
+    <img src="IMG/Rick and morty pc wallpaper.png" alt="Imagem de Introdução">
+  </div>
+  <div class="site-content">
+    <h1>Bem-vindo ao Meu Site</h1>
+    <p>Este é o conteúdo do site que aparece após a animação.</p>
+  </div>
+
+  <script>
+    document.querySelector('.intro-image').addEventListener('click', () => {
+      document.querySelector('.intro-image').style.transform = 'scale(1.2)';
+      document.querySelector('.intro-image').style.opacity = '0';
+      setTimeout(() => {
+        document.querySelector('.intro-image').style.display = 'none';
+        document.querySelector('.site-content').classList.add('active');
+      }, 1000); // 1 segundo para coincidir com a transição de 1s no CSS
+    });
+  </script>
+</body>
+</html>
