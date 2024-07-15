@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .intro-image {
+            width: 100%;
+            height: 100%;
+            background: #ff0000;
+            transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+            z-index: 10;
+            overflow: hidden;
+            position: relative; /* Permitir posicionamento absoluto dos filhos */
+        }
+
+        .intro-image img {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover; /* Ajustar a imagem para cobrir toda a área */
+        }
+
+        .CARRO {
+            position: absolute; /* Posicionamento absoluto */
+            top: 5%; /* Ajuste conforme necessário */
+            right: 5%; /* Ajuste conforme necessário */
+            box-shadow: 20px 20px 4px var(--roror-AZUL-ESCURO);
+            overflow: hidden;
+            height: 300px; /* Ajuste conforme necessário */
+            width: 300px; /* Ajuste conforme necessário */
+            background: white; /* Destacar o carrossel */
+            z-index: 20; /* Garantir que fique acima da imagem */
+        }
+
+        .header-image {
+            display: flex;
+            transition: transform 1s ease-in-out;
+            transform: translateX(0);
+            width: 300px; /* Ajuste conforme necessário */
+        }
+
+        .header-image>img {
+            object-fit: cover;
+            height: 300px; /* Ajuste conforme necessário */
+            width: 300px; /* Ajuste conforme necessário */
+        }
+    </style>
+</head>
+<body>
+    <header class="intro-image">
+        <div>
+            <img src="IMG/csddddddda.png" alt="Imagem de Introdução" id="teste">
+
+            <div class="CARRO">
+                <div class="header-image" id="img">
+                    <img src="IMG/4.png" alt="">
+                    <img src="IMG/5.png" alt="">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        document.querySelector('.intro-image').addEventListener('click', () => {
+            document.querySelector('.intro-image').style.transform = 'scale(1.2)';
+            document.querySelector('.intro-image').style.opacity = '0';
+            setTimeout(() => {
+                document.querySelector('.intro-image').style.display = 'none';
+                document.querySelector('.site-content').classList.add('active');
+            }, 1000); // 1 segundo para coincidir com a transição de 1s no CSS
+        });
+
+        const imgs = document.getElementById("img");
+        const img = document.querySelectorAll("#img img");
+
+        let idx = 0;
+
+        function Carrossel() {
+            idx++;
+            if (idx > img.length - 1) {
+                idx = 0;
+            }
+
+            imgs.style.transform = `translateX(${-idx * 300}px)`; /* Ajuste conforme necessário */
+        }
+        setInterval(Carrossel, 3000);
+        imgs.style.width = `${img.length * 300}px`; /* Ajuste conforme necessário */
+    </script>
+</body>
+</html>

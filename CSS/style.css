@@ -79,63 +79,53 @@
   padding: 0;
   box-sizing: border-box;
 }
-body, html {
-      height: 100%;
+
+    header {
       margin: 0;
-      /* display: flex;
-      justify-content: center;
-      align-items: center; */
-      /* overflow: hidden; */
-      font-family: Arial, sans-serif;
-    }
-    /* styles.css */
-header {
-  margin: 0;
-  /* padding: 0; */
-  width: 100%;
-  height: 100%;
-  /* overflow: hidden;  */
-}
-
-.intro-image {
-  /* position: absolute; */
-  /* top: 0;
-  left: 0; */
-  width: 100%;
-  height: 100%;
-  background: #ff0000;
-  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-  z-index: 10;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-  overflow: hidden;
-}
-
-.intro-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; 
-}
-
-    /* .intro-image {
-      position: absolute;
-      height: 100vh;
       width: 100%;
-      height: 100%; 
-       display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #000;
+      height: 100%;
+  }
+
+  .intro-image {
+      width: 100%;
+      height: 100%;
+      background: #ff0000;
       transition: transform 1s ease-in-out, opacity 1s ease-in-out;
       z-index: 10;
-    }
-    
-    .intro-image img {
-      max-width: 100%;
-      max-height: 100%;
+      overflow: hidden;
+      position: relative; /* Permitir posicionamento absoluto dos filhos */
+  }
+
+  .intro-image img {
+      width: 100%;
+      height: 100vh;
+      object-fit: cover; /* Ajustar a imagem para cobrir toda a área */
+  }
+
+  .CARRO {
+      position: absolute; /* Posicionamento absoluto */
+      top: 5%; /* Ajuste conforme necessário */
+      right: 5%; /* Ajuste conforme necessário */
+      box-shadow: 20px 20px 4px var(--roror-AZUL-ESCURO);
+      overflow: hidden;
+      height: 300px; /* Ajuste conforme necessário */
+      width: 300px; /* Ajuste conforme necessário */
+      background: white; /* Destacar o carrossel */
+      z-index: 20; /* Garantir que fique acima da imagem */
+  }
+
+  .header-image {
+      display: flex;
+      transition: transform 1s ease-in-out;
+      transform: translateX(0);
+      width: 300px; /* Ajuste conforme necessário */
+  }
+
+  .header-image>img {
       object-fit: cover;
-    } */
+      height: 300px; /* Ajuste conforme necessário */
+      width: 300px; /* Ajuste conforme necessário */
+  }
     
     .site-content {
       display: none;
@@ -153,10 +143,13 @@ header {
      display: block;
       animation: fadeIn 1s ease-in-out;
     }
+
+
     .nav{
       display: flex;
       justify-content: center;
       align-items: center;
+      max-width: 100%;
     }
     .nav ul {
       list-style: none;
@@ -167,21 +160,12 @@ header {
       align-items: center;
       display: flex;
       background-color: blue;
+      max-width: 100%;
     }
     .nav ul >li > a{
      margin: 20px;
     }
 
-    /* .work{
-      display: flex;
-      height: 100vh;
-      background-color: aqua;
-    }
-    .work2{
-      display: flex;
-      height: 100vh;
-      background-color: rgb(255, 0, 0);
-    } */
     @keyframes fadeIn {
       from {
         opacity: 0;
@@ -189,28 +173,4 @@ header {
       to {
         opacity: 1;
       }
-    }
-
-    h1{
-      font-family: "Chakra Petch", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-
-    }
-    h2{
-      font-family: "Kode Mono", monospace;
-      font-weight: 400;
-
-    }
-    .t{
-      height: 100vh;
-      background-color: blue;
-    }
-    .t2{
-      height: 100vh;
-      background-color: rgb(44, 44, 179);
-    }
-    .t3{
-      height: 100vh;
-      background-color: rgb(163, 21, 168);
     }
