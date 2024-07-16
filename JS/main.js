@@ -1,23 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="IMG/6.png" type="image/x-icon">
-  <link rel="stylesheet" href="CSS/HOME.css">
-  <title>Portifólio Guilherme C.</title>
-</head>
-<body>
-  <canvas id="canvas"></canvas>
-  <div class="content">
-    <p>Você toma a pílula azul, a história acaba, você acorda na sua cama e acredita no que você quiser acreditar. Você toma a pílula vermelha, você fica no País das Maravilhas e eu mostro até onde vai a toca do coelho.</p>
-    <div class="button-container">
-      <button class="button1" onclick="window.location.href='HTML/CURRICULO.html'">Botão 1</button>
-      <button class="button" onclick="window.location.href='HTML/PORTI.html'">Botão 2</button>
-    </div>
-  </div>
-  <script type="module">
-    import * as datGui from "https://cdn.skypack.dev/dat.gui@0.7.7";
+import * as datGui from "https://cdn.skypack.dev/dat.gui@0.7.7";
 
     const state = {
       fps: 60,
@@ -65,6 +46,3 @@
       }
       interval = setInterval(draw, 1000 / fps);
     });
-  </script>
-</body>
-</html>
