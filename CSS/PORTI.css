@@ -2,60 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 
-/* .chakra-petch-light {
-  font-family: "Chakra Petch", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.chakra-petch-regular {
-  font-family: "Chakra Petch", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.chakra-petch-medium {
-  font-family: "Chakra Petch", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.chakra-petch-semibold {
-  font-family: "Chakra Petch", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-}
-
-.chakra-petch-bold {
-  font-family: "Chakra Petch", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.chakra-petch-light-italic {
-  font-family: "Chakra Petch", sans-serif;
-  font-weight: 300;
-  font-style: italic;
-}
-
-.chakra-petch-regular-italic {
-  font-family: "Chakra Petch", sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.chakra-petch-medium-italic {
-  font-family: "Chakra Petch", sans-serif;
-  font-weight: 500;
-  font-style: italic;
-}
-
-.chakra-petch-semibold-italic {
-  font-family: "Chakra Petch", sans-serif;
-  font-weight: 600;
-  font-style: italic;
-}
-
+/* 
 .chakra-petch-bold-italic {
   font-family: "Chakra Petch", sans-serif;
   font-weight: 700;
@@ -114,85 +61,74 @@ Links para Redes Sociais */
   --color-neutral-10: #171717;
   --color-neutral-30: #a8a29e;
   --color-neutral-40: #f5f5f5;
-
+  /*============================*/
+  --color-ROXO-40: #1e1a35;
+  --color-AZUL-40: #12205d;
+  --color-RED-40: #aa1415;
+  --color-GREY-40: #9aa5a9;
+  --color-WHITE-40: #ffff;
+  /*============================*/
+  --color-vinho-40: #73091d;
+  --color-cinza-40: #172026;
+  --color-yellow-40: #f29f05;
+  --color-YELLOW_mostarda-40: #d97a07;
+  --color-DOURADO-40: #8c5007;
+  /*============================*/
+  --AZUL-ESCURO-40: #020f59;
+  --AZUL-MEDIO-40: #021373;
+  --AZUL-CLARO-40: #1f54bf;
+  --AZUL-CLAROOOOOO-40: #719ed9;
+  --AZUL-MUITO_CLARO-40: #d0dcf2;
+  /*============================*/
+  --VERDE-ESCURO-40: #d9a31a;
+  --VERDE-MEDIO-40: #36414f;
+  --VERDE-CLARO-40: #25537a;
+  --VERDE-CLAROOOOOO-40: #0076ad;
+  /*============================*/
+  --FONT-CHACKRA-p:"Chakra Petch", sans-serif;
+  --FONT-ORBITRON-T:"Orbitron", sans-serif ;
+  --FONT-CODE-T2:"Kode Mono", monospace ;
 }
-
-header {
-  margin: 0;
-  width: 100%;
-  height: 100%;
+header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2%;
 }
-
-.intro-image {
-  width: 100%;
-  height: 100%;
-  background: #ff0000;
-  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-  z-index: 10;
-  overflow: hidden;
-  position: relative;
-}
-
-.intro-image img {
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-}
-
 .CARRO {
-  position: absolute;
-  top: 5%;
-  right: 5%;
-  box-shadow: 20px 20px 4px var(--roror-AZUL-ESCURO);
+  margin: auto;
+  box-shadow: 20px 20px 4px;
   overflow: hidden;
   height: 300px;
   width: 300px;
-  background: white;
-  z-index: 20;
 }
 
 .header-image {
   display: flex;
   transition: transform 1s ease-in-out;
   transform: translateX(0);
-  width: 300px;
+  width: 1200px;
 }
 
-.header-image>img {
+.header-image > img,
+.img-with-button > img {
   object-fit: cover;
   height: 300px;
   width: 300px;
 }
 
-.site-content {
-  display: none;
-  text-align: center;
+.img-with-button {
+  position: relative;
+}
+
+.carousel-button {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #fff;
-  z-index: 1;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
 }
 
-.site-content.active {
-  display: block;
-  animation: fadeIn 1s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-h1 {
-  text-align: center;
-  font-family: "Orbitron", sans-serif;
-  font-size: 100px;
-}
