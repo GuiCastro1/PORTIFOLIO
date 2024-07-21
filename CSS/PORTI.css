@@ -89,15 +89,53 @@ Links para Redes Sociais */
   --FONT-ORBITRON-T:"Orbitron", sans-serif ;
   --FONT-CODE-T2:"Kode Mono", monospace ;
 }
-header{
+
+.intro-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2%;
+  gap: 20px;
+  background: var(--color-ROXO-40);
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  z-index: 10;
+  overflow: hidden;
 }
+/* .tet > img{
+ height: 600px;
+ width: 500px;
+} */
+.site-content {
+  display: none;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 1;
+}
+
+.site-content.active {
+  display: block;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .CARRO {
-  margin: auto;
-  box-shadow: 20px 20px 4px;
+  
+  box-shadow: 20px 20px 4px var(--color-neutral-30);
   overflow: hidden;
   height: 300px;
   width: 300px;
