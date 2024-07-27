@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+/* 
+.chakra-petch-bold-italic {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+} 
+  .kode-mono-<uniquifier> {
+  font-family: "Kode Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+
+    font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+  
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --color-neutral-0: #0e0c0c;
+    --color-neutral-10: #171717;
+    --color-neutral-30: #a8a29e;
+    --color-neutral-40: #f5f5f5;
+    /*============================*/
+    --color-ROXO-40: #1e1a35;
+    --color-AZUL-40: #12205d;
+    --color-RED-40: #aa1415;
+    --color-GREY-40: #9aa5a9;
+    --color-WHITE-40: #ffff;
+    /*============================*/
+    --color-vinho-40: #73091d;
+    --color-cinza-40: #172026;
+    --color-yellow-40: #f29f05;
+    --color-YELLOW_mostarda-40: #d97a07;
+    --color-DOURADO-40: #8c5007;
+    /*============================*/
+    --AZUL-ESCURO-40: #020f59;
+    --AZUL-MEDIO-40: #021373;
+    --AZUL-CLARO-40: #1f54bf;
+    --AZUL-CLAROOOOOO-40: #719ed9;
+    --AZUL-MUITO_CLARO-40: #d0dcf2;
+    /*============================*/
+    --VERDE-ESCURO-40: #d9a31a;
+    --VERDE-MEDIO-40: #36414f;
+    --VERDE-CLARO-40: #25537a;
+    --VERDE-CLAROOOOOO-40: #0076ad;
+    /*============================*/
+    --FONT-CHACKRA-p:"Chakra Petch", sans-serif;
+    --FONT-ORBITRON-T:"Orbitron", sans-serif ;
+    --FONT-CODE-T2:"Kode Mono", monospace ;
+  }
+  h1{
+    font-family: var(--FONT-CODE-T2);
+    font-size: 25px;
+  }
+  h2{
+    font-family: var(--FONT-ORBITRON-T);
+    font-size: 20px;
+  }
+  h3{
+    font-family: var(--FONT-ORBITRON-T);
+    font-size: 15px;
+  }
+p{
+    font-family: var(--FONT-CHACKRA-p);
+    font-size: 20px;
+}
+a{
+    text-decoration: none;
+    
+
+}
